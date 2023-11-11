@@ -5,15 +5,16 @@
 
 [Ultralytics](https://ultralytics.com) [YOLOv8](https://github.com/ultralytics/ultralytics) 是一款前沿、最先进（SOTA）的模型，基于先前 YOLO 版本的成功，引入了新功能和改进，进一步提升性能和灵活性。YOLOv8 设计快速、准确且易于使用，使其成为各种物体检测与跟踪、实例分割、图像分类和姿态估计任务的绝佳选择。<br>
 此项目使用yolov8在KITTI数据集上进行微调，得到了车辆和行人检测模型
-<img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/train/results.png" alt="Train Result">
+<img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/tree/main/runs/detect/predict3/000483.png" alt="Train Result">
 </details>
 </div>
 
 
 ## <div align="center">文档</div>
 
-文档前半部分包括环境准备和如何使用此项目的车辆-行人检测模型。<br>
-后半部分包括如何微调自己的模型。
+文档前半部分包括环境准备和如何使用此项目的车辆-行人检测模型。<br><br>
+后半部分包括如何微调自己的模型。<br><br>
+最后一部分的预训练模型描述摘自[YOLOv8](https://github.com/ultralytics/ultralytics)
 ### <div align="center">车辆-行人检测模型</div>
 环境准备（同微调自定义的模型的环境准备）
 <details open>
@@ -44,11 +45,9 @@ yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
 ```
 该命令会下载`yolov8n`的预训练模型和一张图片，并对该图片进行检测，若命令运行成功，则在`./runs/detect/predict`目录下会出现检测结果图。
 
-<img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/train/results.png" alt="Confirm install">
-</details>
+<img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/tree/main/runs/detect/predict/bus.jpg" alt="Confirm install">
 
 </details>
-
 
 <details open>
 <summary>使用</summary>
@@ -107,7 +106,7 @@ model.predict('car.png', save=True)
 
 由于训练资源有限，此项目只聚焦于行人和车辆，因此把`Tram`，`Truck`，`Van`都归到和`Car`一类；`Person_sitting`，`Cyclist`，都归到`Pedestrian`一类进行训练。
 <br><br>
-数据集的结构应该如下所示<br>
+数据集的结构应该如下所示：<br>
 ```plaintext
 datasets
 │
@@ -140,7 +139,7 @@ r = 0.8<br>
 <details open>
 <summary>预训练模型</summary>
 
-YOLOv8提供了不同尺寸的预训练模型，具体信息如[模型](o)中描述。可以下载预训练模型到本地，也可以训练等训练时自动下载。<br>
+YOLOv8提供了不同尺寸的预训练模型，具体信息如[模型](o)中描述。可以下载预训练模型到本地，也可以训练时自动下载。<br>
 
 
 
@@ -154,6 +153,8 @@ YOLOv8提供了不同尺寸的预训练模型，具体信息如[模型](o)中描
 yolo detect train data=ultralytics/cfg/datasets/kitti.yaml model=yolov8s.yaml pretrained=./yolov8s.pt epochs=300 batch=4 lr0=0.01 resume=True
 ```
 此项目使用了YOLOv8s的预训练模型，可以按照修改上面的参数以更改训练配置。<br>
+<div align="center">
+
 | 参数 | 含义 |
 |:-------:|:-------:|
 | data | 数据集的描述配置文件路径 |
@@ -164,6 +165,7 @@ yolo detect train data=ultralytics/cfg/datasets/kitti.yaml model=yolov8s.yaml pr
 | lr0 | 学习率 |
 | resume | 中断后是否可恢复继续训练 |
 
+</div>
 
 
 
