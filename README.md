@@ -6,9 +6,20 @@
 [Ultralytics](https://ultralytics.com) [YOLOv8](https://github.com/ultralytics/ultralytics) 是一款前沿、最先进（SOTA）的模型，基于先前 YOLO 版本的成功，引入了新功能和改进，进一步提升性能和灵活性。YOLOv8 设计快速、准确且易于使用，使其成为各种物体检测与跟踪、实例分割、图像分类和姿态估计任务的绝佳选择。<br>
 此项目使用yolov8在KITTI数据集上进行微调，得到了车辆和行人检测模型
 <img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/detect/predict3/000483.png" alt="Train Result">
-</details>
+
+模型的检测精度如下表所示：
+<div align="center">
+
+| Class      | Images | Instances | Box(P | R | mAP50 | mAP50-95) |
+|------------|--------|-----------|-------|---|-------|-----------|
+| all        | 1497   | 7465      | 0.934 | 0.866 | 0.929 | 0.713 |
+| Pedestrian | 1497   | 965       | 0.922 | 0.772 | 0.877 | 0.554 |
+| Car        | 1497   | 6500      | 0.945 | 0.96 | 0.982 | 0.873 |
+
 </div>
 
+以`Car`为例说明，精确率`P=0.945`，召回率`R=0.96`，`mAP50=0.982`，`mAP50-95=0.873`。<br>
+评估指标显示`Car`的召回率和`mAP50-95`比`Pedestrian`高出较多，这是因为整个`KITTI`数据集中行人的数据量大量少于车的数据量。<br>上述指标的计算公式如[博客](https://blog.csdn.net/qq_63708623/article/details/128508776)所描述。
 
 ## <div align="center">文档</div>
 
