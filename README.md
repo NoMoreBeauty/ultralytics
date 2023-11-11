@@ -4,10 +4,13 @@
 <br>
 
 [Ultralytics](https://ultralytics.com) [YOLOv8](https://github.com/ultralytics/ultralytics) 是一款前沿、最先进（SOTA）的模型，基于先前 YOLO 版本的成功，引入了新功能和改进，进一步提升性能和灵活性。YOLOv8 设计快速、准确且易于使用，使其成为各种物体检测与跟踪、实例分割、图像分类和姿态估计任务的绝佳选择。<br>
-此项目使用yolov8在KITTI数据集上进行微调，得到了车辆和行人检测模型
+
+<span style="color: lightskyblue;">此项目使用yolov8在KITTI数据集上进行微调，得到了车辆和行人检测模型</span>
+
 <img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/detect/predict3/000483.png" alt="Train Result">
 
-模型的检测精度如下表所示：
+
+<span style="color: lightskyblue;">模型的检测精度如下表所示：</span>
 <div align="center">
 
 | Class      | Images | Instances | Box(P | R | mAP50 | mAP50-95) |
@@ -26,8 +29,8 @@
 
 ## <div align="center">文档</div>
 
-文档前半部分包括环境准备和如何使用此项目的车辆-行人检测模型。<br><br>
-后半部分包括如何微调自己的模型。<br><br>
+文档前半部分包括环境准备和如何使用此项目的<span style="color: red;">车辆-行人检测模型</span>。<br><br>
+后半部分包括如何<span style="color: red;">微调</span>自己的模型。<br><br>
 最后一部分的预训练模型描述摘自[YOLOv8](https://github.com/ultralytics/ultralytics)
 ### <div align="center">车辆-行人检测模型</div>
 环境准备（同微调自定义的模型的环境准备）
@@ -78,7 +81,7 @@ alt="Confirm install">
 ```bash
 yolo predict model=./runs/train/weights/best.pt source=./car.png
 ```
-可以通过修改source指定待检测的图片，包含预测结果的图片的具体位置（取决于第几次预测）由命令行输出给出。
+可以通过修改`source`指定待检测的图片，包含预测结果的图片的具体位置（取决于第几次预测）由命令行输出给出。
 
 #### Python
 
