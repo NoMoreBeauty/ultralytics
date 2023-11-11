@@ -64,7 +64,7 @@ yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
 
 <div align="center">
 
-<img width="300" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/detect/predict/bus.jpg" 
+<img width="280" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/detect/predict/bus.jpg" 
 alt="Confirm install">
 
 </div>
