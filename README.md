@@ -5,7 +5,7 @@
 
 [Ultralytics](https://ultralytics.com) [YOLOv8](https://github.com/ultralytics/ultralytics) 是一款前沿、最先进（SOTA）的模型，基于先前 YOLO 版本的成功，引入了新功能和改进，进一步提升性能和灵活性。YOLOv8 设计快速、准确且易于使用，使其成为各种物体检测与跟踪、实例分割、图像分类和姿态估计任务的绝佳选择。<br>
 此项目使用yolov8在KITTI数据集上进行微调，得到了车辆和行人检测模型
-<img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/tree/main/runs/detect/predict3/000483.png" alt="Train Result">
+<img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/detect/predict3/000483.png" alt="Train Result">
 </details>
 </div>
 
@@ -45,7 +45,8 @@ yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
 ```
 该命令会下载`yolov8n`的预训练模型和一张图片，并对该图片进行检测，若命令运行成功，则在`./runs/detect/predict`目录下会出现检测结果图。
 
-<img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/tree/main/runs/detect/predict/bus.jpg" alt="Confirm install">
+<img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/detect/predict/bus.jpg" 
+alt="Confirm install">
 
 </details>
 
