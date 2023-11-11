@@ -128,9 +128,22 @@ datasets
 ```
 此项目的`data_split.py`可以用于从源数据集中拆分训练集和测试集，使用方法:<br>
 ```bash
-python data_split.py
+python .\data_split.py --train_data_path datasets/kitti/images/train --train_label_path datasets/kitti/labels/train --eval_data_path datasets/kitti/images/eval --eval_label_path datasets/kitti/labels/eval --r 0.8
 ```
-r = 0.8<br>
+可以修改参数适应具体配置：
+<div align="center">
+
+| 参数 | 含义 |
+|:-------:|:-------:|
+| train_data_path | 训练集数据路径（需要文件夹存在） |
+| train_label_path | 训练集标签路径（需要文件夹存在） |
+| eval_data_path | 测试集数据路径（需要文件夹存在） |
+| eval_label_path | 测试集标签路径（需要文件夹存在） |
+| r | 训练集与测试集比例 |
+
+</div>
+<br>
+
 此外还需要准备一个关于数据集的配置文件，位置任意，后续训练时使用，此项目的`kitti.yaml`存储在`ultralytics\cfg\datasets`下，内容包括训练数据位置，验证数据位置，测试数据位置（可省略）和类别情况，`kitti.yaml`的内容已经是最简短的，可以参照`kitti.yaml`修改。
 
 </details>
