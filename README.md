@@ -45,7 +45,7 @@ yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
 ```
 该命令会下载`yolov8n`的预训练模型和一张图片，并对该图片进行检测，若命令运行成功，则在`./runs/detect/predict`目录下会出现检测结果图。
 
-<img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/detect/predict/bus.jpg" 
+<img width="360" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/detect/predict/bus.jpg" 
 alt="Confirm install">
 
 </details>
