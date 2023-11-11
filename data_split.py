@@ -2,10 +2,10 @@ import os
 import random
 import shutil
 
-train_data_path = "D:\\workspace\\ultralytics\\datasets\\kitti\\images\\train"
-train_label_path = "D:\\workspace\\ultralytics\\datasets\\kitti\\labels\\train"
-eval_data_path = "D:\\workspace\\ultralytics\\datasets\\kitti\\images\\eval"
-eval_label_path = "D:\\workspace\\ultralytics\\datasets\\kitti\\labels\\eval"
+train_data_path = "datasets/kitti/images/train"
+train_label_path = "datasets/kitti/labels/train"
+eval_data_path = "datasets/kitti/images/eval"
+eval_label_path = "datasets/kitti/labels/eval"
 
 L = []
 r = 0.8
@@ -34,6 +34,3 @@ except Exception:
     print("error ")
 else:
     print("success !")
-
-# test
-# shutil.move("D:\\workspace\\ultralytics\\datasets\\kitti\\images\\train\\003430.png","D:\\workspace\\ultralytics\\datasets")
