@@ -227,6 +227,10 @@ runs
 <img width="1024" src="https://github.com/NoMoreBeauty/ultralytics/blob/main/runs/train/results.png" alt="Train Result">
 </details>
 
+## <div align="center">模型文件</div>
+
+模型文件可以在[百度网盘（提取码1234）](https://pan.baidu.com/s/1bgVb8oUS0M5grl4iyDsdQw)中下载，模型文件应该放在`runs/train/weights/`下。
+
 
 ## <div align="center">模型（取自YOLOv8）</div>
 
